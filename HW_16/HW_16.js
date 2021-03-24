@@ -15,19 +15,21 @@ console.log(counter(228));
 
 // 02
 
-var getUpdatedArr = (function (arg) {
-  var arr = [];
-
-  return function (arg) {
-    arr.push(arg);
-    return arr.filter(function (el) {
-      return el != undefined;
-    });
-  };
+let getUpdatedArr = (function () { 
+  let arr = []; 
+  return result = function (...args) { 
+    if(arguments.length > 0){ 
+      arr.push(...args); 
+    } else { 
+      arr = []; 
+    } 
+    return arr 
+  } 
 })();
 
-console.log(getUpdatedArr(3)); // [3]
-console.log(getUpdatedArr(5)); // [3, 5]
-console.log(getUpdatedArr({ name: "Vasya" })); // [3, 5, {name: 'Vasya'}]
-console.log(getUpdatedArr()); // []
-console.log(getUpdatedArr(4)); // [4]
+
+console.log(getUpdatedArr(3));
+console.log(getUpdatedArr(5));
+console.log(getUpdatedArr({ name: "Vasya" }));
+console.log(getUpdatedArr());
+console.log(getUpdatedArr(4));
