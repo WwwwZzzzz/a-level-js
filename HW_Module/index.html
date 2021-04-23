@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Currency</title>
+    <link
+      rel="shortcut icon"
+      href="https://lh3.googleusercontent.com/proxy/iUK7W1PcqmgXgKcOP_KPYVKyaydfefahp5t9qwSflK1PQeTvO-1-gbyFQ55dcoaIHibXIVPVDUhQ2uwH1HrGJTuzhqpt0OMw8i5uDaU"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="main-wrap container-fluid mt-3 mb-3">
+      <h1 class="text-center mb-5">Currency Converter</h1>
+      <form action="">
+        <div class="mb-3 input-group">
+          <label class="form-label visually-hidden" for="currency-from"
+            >Currency From</label
+          >
+          <input
+            type="number"
+            name="currency-from"
+            id="currency_from"
+            class="update-currency form-control"
+          />
+          <select
+            class="form-select update-currency"
+            aria-label=""
+            id="select_currency_from"
+          >
+            <option selected="selected">EUR</option>
+          </select>
+        </div>
+        <div class="mb-3 input-group">
+          <label
+            class="form-label visually-hidden"
+            for="currency-to"
+            aria-readonly="true"
+            >Currency To</label
+          >
+          <input
+            class="form-control"
+            type="number"
+            name="currency-to"
+            id="currency_to"
+            disabled
+          />
+          <select
+            class="form-select update-currency"
+            aria-label=""
+            id="select_currency_to"
+          >
+            <option selected="selected">USD</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
