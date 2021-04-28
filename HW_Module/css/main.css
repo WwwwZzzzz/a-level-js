@@ -1,0 +1,9 @@
+.main-wrap {
+    max-width: 50%;
+    width: 100%;
+
+}
+
+input, select {
+    opacity: 0.9;
+}
