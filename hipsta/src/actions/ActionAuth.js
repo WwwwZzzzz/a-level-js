@@ -1,5 +1,5 @@
 import { actionPromise } from "../reducers/allReducers";
-import { getGQL, gqlQuery } from "../actions/ActionGQL"
+import { gqlQuery } from "../actions/ActionGQL"
 
 export const actionAuthLogin = (token) => ({ type: "LOGIN", token });
 export const actionAuthLogout = () => ({ type: "LOGOUT" });
@@ -17,9 +17,9 @@ const actionPromiseRegister = (login, password) =>
     login _id
   }
 }`,
-            { login, password }
-        )
-    );
+    { login, password }
+)   
+);
 
 const actionPromiseLogin = (login, password) =>
     actionPromise(
