@@ -2,7 +2,7 @@ import React, { Component, useState, useEffect } from "react";
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import {actionPromiseFeed} from "../actions/ActionFeed"
-import { connect } from "react-redux";
+
 
 
 const authReducer = (state, { type, token }) => {
@@ -20,6 +20,7 @@ const authReducer = (state, { type, token }) => {
     let middleToken = token.split(".")[1];
     let cleanToken = atob(middleToken);
     let tokenJson = JSON.parse(cleanToken);
+    localStorage.myUserId = tokenJson.sub.id;
     return { token, data: { tokenJson } };
   }
   if (type === "LOGOUT") {
@@ -66,6 +67,7 @@ export const store = createStore(
     applyMiddleware(thunk));
 
 store.subscribe(() => console.log(store.getState()));
+console.log(store.getState());
 
 // store.dispatch(actionPromiseFeed());
 

@@ -15,7 +15,7 @@ const getGQL =
       )
         .json()
         .then((payload) => {
-          console.log(payload);
+          // console.log(payload);
           if (payload.errors) {
             throw new Error(JSON.stringify(payload.errors, null, 4));
           }
