@@ -86,7 +86,6 @@ const RegisterForm = ({ onLogin }) => {
                     label="Password"
                     id="password"
                     component={TextField}
-                    // validate={[required, minLength(6)]}
                     type="password" 
                     value={password} 
                     onChange={(e) => setPassword(e.target.value)}
@@ -100,7 +99,6 @@ const RegisterForm = ({ onLogin }) => {
                     label="Confirm password"
                     id="passwordConfirm"
                     component={TextField}
-                    validate={[required, match("password")]}
                     value={password} 
                     type="password"
                   />
